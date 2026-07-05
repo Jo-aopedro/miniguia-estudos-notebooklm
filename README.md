@@ -356,48 +356,48 @@ Para auxiliar no desenvolvimento, o ecossistema oferece o **MCP Inspector**, uma
 
 ### 3. Conjunto de Prompts Reutilizáveis para Revisão
 
-Estes prompts podem ser utilizados em chats de IA para validar seu conhecimento ou simular cenários:
-A. O Desafio do Arquiteto de Sistemas (Design de Servidor)
-Objetivo: Praticar a decisão entre as três capacidades fundamentais (Resources, Tools e Prompts)
-.
-Prompt: "Atue como um Arquiteto de Soluções Sênior especializado em MCP. Eu preciso projetar um servidor MCP para conectar um Sistema de Gestão de Documentos (DMS) a um assistente de IA.
-Analise se o acesso aos metadados dos documentos deve ser um Resource ou uma Tool
-.
-Projete uma Tool para 'pesquisa semântica', definindo quais argumentos seriam necessários e como a IA deve lidar com a aprovação do usuário para executá-la
-.
-Crie um Prompt Template que ajude o usuário a resumir documentos técnicos longos encontrados nesse servidor
-. Justifique cada escolha com base nos princípios de interoperabilidade e segurança do MCP
-."
-B. Simulação de Debugging: O Mistério do JSON-RPC Corrompido
-Objetivo: Fixar o conhecimento crítico sobre transporte stdio e o uso correto de stderr
-.
-Prompt: "Simule um cenário de erro técnico. Desenvolvi um servidor MCP em Python (usando FastMCP) para rodar via stdio
-. No entanto, o Claude Desktop exibe um erro de 'conexão perdida' ou 'JSON-RPC inválido'
-.
-Explique por que o uso acidental de print() no código pode causar esse erro
-.
-Demonstre como eu deveria redirecionar logs de depuração para o local correto para que eles apareçam no arquivo mcp-server-SERVERNAME.log sem quebrar o protocolo
-.
-Quais são os dois passos fundamentais no arquivo claude_desktop_config.json para garantir que o host encontre o executável do servidor? (Dica: caminhos absolutos e comandos de ambiente)
-."
-C. Laboratório de Configuração e Ambiente (Local vs. Remoto)
-Objetivo: Compreender a diferença prática entre transportes stdio e SSE e ferramentas de execução como uvx
-.
-Prompt: "Compare a implementação de um servidor MCP local rodando via stdio com um servidor remoto utilizando SSE (Server-Sent Events)
-.
-Explique em quais situações o uso de uvx ou npx é preferível para iniciar servidores de referência, como os de 'Git' ou 'PostgreSQL'
-.
-Descreva os riscos de segurança ao expor um servidor via SSE e como o modelo de 'conexões de dois sentidos seguras' do MCP ajuda a mitigar isso
-.
-Crie um exemplo de configuração JSON para o Claude Desktop que integre simultaneamente um servidor local e um servidor remoto
-."
-D. Mapeamento de Ecossistema e Casos de Uso Reais
-Objetivo: Visualizar a aplicação prática do MCP em fluxos de trabalho de agentes
-.
-Prompt: "Analise os servidores de referência oficiais do MCP (como Google Drive, GitHub e Slack)
-.
-Como a combinação desses servidores permite que um agente de IA atue de forma personalizada em um fluxo de trabalho corporativo?
-Explique o conceito de 'Sequential Thinking' (Pensamento Sequencial) como um servidor MCP e como ele melhora a resolução de problemas complexos pela IA
-.
-Se eu quiser que a IA crie um código e o envie para um repositório, quais ferramentas (Tools) dos servidores de 'Filesystem' e 'Git' seriam chamadas sequencialmente?
-"
+Abaixo, apresento templates estruturados que utilizam técnicas de *Chain-of-Thought* e simulação de papéis para aprofundar seu domínio sobre o protocolo.
+
+#### **A. O Desafio do Arquiteto de Sistemas (Design de Servidor)**
+> **Objetivo:** Praticar a decisão entre as três capacidades fundamentais (Resources, Tools e Prompts).
+>
+> **Prompt:**
+> "Atue como um Arquiteto de Soluções Sênior especializado em MCP. Eu preciso projetar um servidor MCP para conectar um **Sistema de Gestão de Documentos (DMS)** a um assistente de IA.
+> 1. Analise se o acesso aos metadados dos documentos deve ser um **Resource** ou uma **Tool**.
+> 2. Projete uma **Tool** para 'pesquisa semântica', definindo quais argumentos seriam necessários e como a IA deve lidar com a aprovação do usuário para executá-la.
+> 3. Crie um **Prompt Template** que ajude o usuário a resumir documentos técnicos longos encontrados nesse servidor.
+> Justifique cada escolha com base nos princípios de interoperabilidade e segurança do MCP."
+
+#### **B. Simulação de Debugging: O Mistério do JSON-RPC Corrompido**
+> **Objetivo:** Fixar o conhecimento crítico sobre transporte `stdio` e o uso correto de `stderr`.
+>
+> **Prompt:**
+> "Simule um cenário de erro técnico. Desenvolvi um servidor MCP em **Python (usando FastMCP)** para rodar via `stdio`. No entanto, o Claude Desktop exibe um erro de 'conexão perdida' ou 'JSON-RPC inválido'.
+> 1. Explique por que o uso acidental de `print()` no código pode causar esse erro.
+> 2. Demonstre como eu deveria redirecionar logs de depuração para o local correto para que eles apareçam no arquivo `mcp-server-SERVERNAME.log` sem quebrar o protocolo.
+> 3. Quais são os dois passos fundamentais no arquivo `claude_desktop_config.json` para garantir que o host encontre o executável do servidor? (Dica: caminhos absolutos e comandos de ambiente)."
+
+#### **C. Laboratório de Configuração e Ambiente (Local vs. Remoto)**
+> **Objetivo:** Compreender a diferença prática entre transportes `stdio` e `SSE` e ferramentas de execução como `uvx`.
+>
+> **Prompt:**
+> "Compare a implementação de um servidor MCP local rodando via **`stdio`** com um servidor remoto utilizando **`SSE` (Server-Sent Events)**.
+> 1. Explique em quais situações o uso de `uvx` ou `npx` é preferível para iniciar servidores de referência, como os de 'Git' ou 'PostgreSQL'.
+> 2. Descreva os riscos de segurança ao expor um servidor via `SSE` e como o modelo de 'conexões de dois sentidos seguras' do MCP ajuda a mitigar isso.
+> 3. Crie um exemplo de configuração JSON para o Claude Desktop que integre simultaneamente um servidor local e um servidor remoto."
+
+#### **D. Mapeamento de Ecossistema e Casos de Uso Reais**
+> **Objetivo:** Visualizar a aplicação prática do MCP em fluxos de trabalho de agentes.
+>
+> **Prompt:**
+> "Analise os servidores de referência oficiais do MCP (como **Google Drive, GitHub e Slack**).
+> 1. Como a combinação desses servidores permite que um agente de IA atue de forma personalizada em um fluxo de trabalho corporativo?
+> 2. Explique o conceito de **'Sequential Thinking'** (Pensamento Sequencial) como um servidor MCP e como ele melhora a resolução de problemas complexos pela IA.
+> 3. Se eu quiser que a IA crie um código e o envie para um repositório, quais ferramentas (Tools) dos servidores de 'Filesystem' e 'Git' seriam chamadas sequencialmente?"
+
+---
+
+### Dicas para Maximizar os Prompts:
+*   **Forneça Contexto Adicional:** Se você estiver usando uma linguagem específica (TypeScript, Go, Java, Rust), adicione ao prompt: *"Considere que estou desenvolvendo usando o SDK oficial de [Linguagem]"*.
+*   **Peça Código de Exemplo:** Para o Prompt A, você pode complementar com: *"Escreva o esqueleto do código em Python usando a classe `FastMCP` para implementar a ferramenta sugerida"*.
+*   **Logs Reais:** Se encontrar um erro, cole o conteúdo do seu `mcp.log` no chat e use o Prompt B como base para a resolução.
