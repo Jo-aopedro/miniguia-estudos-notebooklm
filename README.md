@@ -38,7 +38,7 @@ Abaixo estão selecionadas 5 fontes abertas oficiais e de referência para funda
 ---
 
 ## 3. Engenharia de Prompts e "Cicatrizes" (Troubleshooting)
-* **Antigravity** *
+### Antigravity
   * **Prompt 1:** *A seguir está a descrição de uma tarefa que eu preciso relizar e quero que crie, a partir da pasta deste proeto que estamos, um repositório no meu github com o nome miniguia-estudos-notebooklm. No repositório crie o arquivo readme com a estrutura pronta dos tópicos , além das partes 'Contexto e Objetivos' e Curadoria de fontes já pronta'. Me dê o prompt que eu devo fornecer no notebooklm para que seja gerado um notebook que atenda aos requisitos da parte 'Miniguia de Estudo (Entrega Final)' e as melhores fontes encontradas para o tema indicado.
 O tema de estudos é MCP e o meu objetivo é adquirir conhecimento profundo sobre o tema.
 
@@ -56,9 +56,8 @@ Resumos estruturados do assunto;
 Um glossário com os principais conceitos aprendidos;
 Um conjunto de prompts reutilizáveis que possam apoiar futuras revisões sobre o tema."
 
-  * **Prompt 2:** *https://modelcontextprotocol.io/docs/concepts/specification
     
-* **NotebookLM** *
+### NotebookLM
   
   * **Prompt 1:** *Olá, NotebookLM. Com base exclusivamente nos documentos e fontes que eu carreguei sobre o Model Context Protocol (MCP), preciso que você crie um "Miniguia de Estudo" aprofundado e altamente estruturado.
 
@@ -92,7 +91,7 @@ Adote um tom didático, preciso, profissional e adequado para desenvolvedores ou
 ### Diário de Ajustes e Resoluções (Cicatrizes)
 *Preencha esta área à medida que interagir com o NotebookLM. Use a estrutura abaixo para documentar seu aprendizado na formulação de perguntas:*
 
-* **Antigravity** *
+### Antigravity
 * **Tentativa 1**:
   * **Prompt Utilizado:** 
 A seguir está a descrição de uma tarefa que eu preciso relizar e quero que crie, a partir da pasta deste proeto que estamos, um repositório no meu git com o nome miniguia-estudos-notebooklm .
@@ -132,7 +131,7 @@ Por favor, revise o [Plano de Implementação](file:///C:/Users/Jo%C3%A3o/.gemin
     
   * **Correção/Ajuste:** Revisei identificando onde não estava tão bem explicado e refiz.
 
-* **NotebookLM** *
+### NotebookLM
 * **Tentativa 1**:
   * **Prompt Utilizado:** 
 Olá, NotebookLM. Com base exclusivamente nos documentos e fontes que eu carreguei sobre o Model Context Protocol (MCP), preciso que você crie um "Miniguia de Estudo" aprofundado e altamente estruturado.
